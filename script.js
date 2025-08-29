@@ -1,5 +1,5 @@
 // API base
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = 'https://voice-agent-8jwa.onrender.com';
 
 // Core hooks (existing)
 const startAndstopBtn = document.getElementById('startAndstopBtn');
@@ -461,7 +461,7 @@ function floatTo16BitPCM(float32Array) {
 }
 
 async function startRecording() {
-  ws = new WebSocket(`ws://127.0.0.1:8000/ws/audio?session=${sessionId}`);
+  ws = new WebSocket(`wss://voice-agent-8jwa.onrender.com/ws/audio?session=${sessionId}`);
 
   ws.onopen = () => {
     console.log("WebSocket connected");
